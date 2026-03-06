@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>想加入蘋果的原因</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&family=DM+Serif+Display:ital@0;1&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+```
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-en: #8e8e93;
+  --accent: #0071e3;
+  --accent-light: #e8f1fb;
+  --border: #d2d2d7;
+  --gold: #c8a96e;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Noto Serif TC', serif;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 24px 70px;
+  text-align: center;
+  background: linear-gradient(160deg, #000 0%, #1a1a2e 55%, #0a0a0a 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,113,227,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(200,169,110,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.apple-logo {
+  font-size: 50px;
+  margin-bottom: 22px;
+}
+
+.hero-eyebrow {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 5.5vw, 60px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #f5f5f7;
+  margin-bottom: 10px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-en {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: clamp(16px, 2.5vw, 24px);
+  color: rgba(255,255,255,0.35);
+  margin-top: 6px;
+}
+
+/* ── Divider ── */
+.divider-wrap {
+  background: var(--bg);
+  padding: 44px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.divider {
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ── Cards ── */
+.reasons {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.reason-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 48px 52px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent), var(--gold));
+  border-radius: 4px 0 0 4px;
+}
+
+.reason-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 68px;
+  font-style: italic;
+  color: var(--accent-light);
+  line-height: 1;
+  position: absolute;
+  top: 22px; right: 36px;
+  user-select: none;
+  letter-spacing: -2px;
+}
+
+.reason-tag {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.reason-card h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.zh {
+  font-size: 15.5px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.en-block {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 4px;
+}
+
+.en-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--border);
+  margin-bottom: 10px;
+}
+
+.en {
+  font-family: 'Lato', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--text-en);
+  font-weight: 300;
+}
+
+.emoji-accent { font-size: 1.05em; vertical-align: middle; }
+
+/* ── Footer ── */
+footer {
+  background: #000;
+  padding: 36px 24px;
+  text-align: center;
+}
+
+footer p {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  .reason-card { padding: 36px 28px; }
+  .reason-number { font-size: 50px; right: 18px; top: 16px; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="apple-logo"></div>
+  <p class="hero-eyebrow">求職信 · Cover Letter</p>
+  <h1>想加入蘋果的<em>原因</em></h1>
+  <p class="hero-en">Why I Aspire to Join Apple</p>
+</section>
+
+<div class="divider-wrap"><div class="divider"></div></div>
+
+<section class="reasons">
+
+  <div class="reason-card">
+    <span class="reason-number">01</span>
+    <span class="reason-tag">服務熱忱</span>
+    <h2>幫助每一位走進門的客人</h2>
+    <p class="zh">
+      我很期待能夠去幫助那些需要幫助的客人，比方說教他們如何設定基本設置、協助轉到其他地區下載特定的應用程序，以及介紹蘋果的造圖 AI 技術等等 <span class="emoji-accent">✨</span>。我也希望讓那些只是進來逛逛的客人，同樣能感受到蘋果大家庭 <span class="emoji-accent">🏠</span> 的和諧與友善，平等地對待每一位走進來的客人。
+    </p>
+    <div class="en-block">
+      <p class="en-label">English</p>
+      <p class="en">
+        I am looking forward to helping guests who need assistance — teaching them how to configure basic settings, helping them switch regions to download specific apps, and introducing Apple's AI image-generation capabilities. I also want those who simply drop in to browse to feel the warmth and harmony of the Apple family, and to treat every single visitor with equal care and respect.
+      </p>
+    </div>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">02</span>
+    <span class="reason-tag">自我實現</span>
+    <h2>讓興趣與職業相交的機會</h2>
+    <p class="zh">
+      這個工作機會對我而言，是對於自我實現的滿足。我希望未來的職業能與我的興趣愛好有所連結，這樣才能在工作中更有活力，並保持積極的工作態度。比起推銷名牌包包 <span class="emoji-accent">👜</span> 或沖一杯咖啡 <span class="emoji-accent">☕</span>，我更喜愛科技產品，所以我下定決心投遞履歷給貴公司，期盼能有機會成為蘋果的一份子。
+    </p>
+    <div class="en-block">
+      <p class="en-label">English</p>
+      <p class="en">
+        This opportunity represents a genuine path to self-fulfillment for me. I believe a career connected to one's passions brings sustained energy and a positive work attitude. I prefer technology products to selling designer bags or brewing coffee, which is exactly why I made the determined decision to submit my résumé to Apple. I hope to have the chance to become part of this extraordinary family.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>Crafted with care · 用心製作 &nbsp;|&nbsp; Apple Application Letter</p>
+</footer>
+
+</body>
+</html>
